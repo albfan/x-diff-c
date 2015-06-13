@@ -40,7 +40,7 @@
 
 #include <iostream>
 #include <string>
-#include <hash_map>
+#include <unordered_map>
 #include <vector>
 
 using namespace std;
@@ -186,8 +186,8 @@ private:
 	bool	**_isAttribute;
 	unsigned long long	**_hashValue;
 	string	**_value;
-	hash_map<string, int, HashString>	_tagNames;
-	hash_map<int, vector<size_t> >	_cdataTable;
+   unordered_map<string, int, HashString>	_tagNames;
+   unordered_map<int, vector<size_t> >	_cdataTable;
 
 	void _initialize();
 	void _expand(int topid);

@@ -50,7 +50,7 @@ void XLut::add(int eid1, int eid2, int dist)
 	unsigned long long	value = ((unsigned long long)eid1 << 40) | ((unsigned long long)(eid2 & 0xffffff) << 16) | dist;
 	if (_possibleConflict)
 	{
-		hash_map<unsigned int, unsigned long long>::const_iterator hit = _xTable.find(key);
+      unordered_map<unsigned int, unsigned long long>::const_iterator hit = _xTable.find(key);
 		if (hit == _xTable.end())
 			_xTable[key] = value;
 		else
@@ -72,7 +72,7 @@ void XLut::add(int eid1, int eid2, int dist)
 int XLut::get(int eid1, int eid2)
 {
 	unsigned int	key = ((unsigned int)eid1 << 16) | (eid2 & 0xffff);
-	hash_map<unsigned int, unsigned long long>::const_iterator hit = _xTable.find(key);
+   unordered_map<unsigned int, unsigned long long>::const_iterator hit = _xTable.find(key);
 	if (hit == _xTable.end())
 		return XTree::NO_CONNECTION;
 
