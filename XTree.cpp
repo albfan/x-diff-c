@@ -251,7 +251,7 @@ void XTree::addCDATA(int eid, size_t position)
 	}
 }
 
-void XTree::addMatching(int eid, int matchType, int matchNode = -1)
+void XTree::addMatching(int eid, int matchType, int matchNode)
 {
 	if (matchType == NO_MATCH)
 		_matching[eid/_botCap][eid%_botCap] = NO_MATCH;

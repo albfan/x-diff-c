@@ -974,7 +974,7 @@ int XDiff::distance(int eid1, int eid2, bool toRecord, int threshold)
 		return XTree::NO_CONNECTION;
 }
 
-int XDiff::_xdiff(int pid1, int pid2, int threshold = XTree::NO_CONNECTION)
+int XDiff::_xdiff(int pid1, int pid2, int threshold)
 {
 	int	dist = 0;
 
