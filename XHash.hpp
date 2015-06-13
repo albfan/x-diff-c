@@ -41,6 +41,8 @@
 #include <string>
 #include <iostream>
 
+using namespace std;
+
 /**
   * XHash is an implementation of DES
   */

@@ -43,6 +43,8 @@
 #include <hash_map>
 #include <vector>
 
+using namespace std;
+
 class HashString
 {
 public:

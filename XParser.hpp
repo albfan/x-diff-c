@@ -50,6 +50,8 @@
 #include "XTree.hpp"
 #include "XHash.hpp"
 
+using namespace xercesc;
+
 #define _STACK_SIZE 64
 
 
